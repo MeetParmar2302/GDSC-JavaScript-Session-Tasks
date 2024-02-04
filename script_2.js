@@ -8,3 +8,4 @@ function changeBackgroundColor() {
 function getRandomValue() {
     return Math.floor(Math.random() * 256);
 }
+
