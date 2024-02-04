@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display User Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #info-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: left;
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="info-container">
+        <h1>User Information</h1>
+
+        <script>
+            
+            var params = new URLSearchParams(window.location.search);
+            var name = params.get("name");
+            var email = params.get("email");
+            var age = params.get("age");
+
+            document.write("<p><strong>Name:</strong> " + name + "</p>");
+            document.write("<p><strong>Email:</strong> " + email + "</p>");
+            document.write("<p><strong>Age:</strong> " + age + "</p>");
+        </script>
+    </div>
+
+</body>
+</html>
